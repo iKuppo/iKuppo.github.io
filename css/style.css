@@ -275,6 +275,9 @@ header nav a:hover {
 .about header {
     background-color: #1f1f1f;
 }
+#profile {
+    padding-bottom: 40px;
+}
 #profile-image {
     padding: 10px 10px 10px 0;
 }
@@ -309,6 +312,17 @@ header nav a:hover {
     width: 20px;
     margin-right: 10px;
 }
+#resume-logo {
+    width: 20px;
+    height: 25px;
+    vertical-align: text-top;
+    margin-right: 10px;
+    display: inline-block;
+    background-image: url(../img/logo-white.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 #profile h2 {
     color: #C62929;
     font-size: 25px;
@@ -317,6 +331,9 @@ header nav a:hover {
 }
 #profile p {
     color: #fff;
+}
+.about footer {
+    background-color: #1f1f1f;
 }
 /* End About Page */
 
@@ -367,6 +384,11 @@ header nav a:hover {
     max-width: 100%;
     height: 100px;
     border: 1px solid #C62929;
+}
+#contact textarea:focus {
+    outline: none;
+    border: 2px solid #C62929;
+    padding: 4px 9px;
 }
 #contact input[type="submit"] {
     display: block;
