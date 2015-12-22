@@ -14,6 +14,21 @@ a, p {
     box-sizing: border-box;
 }
 
+.desktop {
+    display: none;
+}
+.mobile {
+    display: block;
+}
+@media (min-width: 767px) {
+    .desktop {
+        display: block;
+    }
+    .mobile {
+        display: none;
+    }
+}
+
 html {
     background-color: #333;
 }
@@ -45,6 +60,10 @@ header {
 header.top {
     background-color: transparent;
     height: 125px;
+}
+
+header .grid {
+    position: relative;
 }
 
 header #home-link,
@@ -110,6 +129,121 @@ header nav a.selected:visited {
 
 header nav a:hover {
     opacity: 1;
+}
+
+#navicon {
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+#navicon span {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: transform .3s, top .3s;
+    -moz-transition: transform .3s, top .3s;
+    transition: transform .3s, top .3s;
+}
+#navicon span:first-child {
+    top: 25%;
+}
+#navicon span:nth-child(2) {
+    top: 50%;
+    opacity: 1;
+    -webkit-transition: opacity .3s;
+    -moz-transition: opacity .3s;
+    transition: opacity .3s;
+}
+#navicon span:nth-child(3) {
+    top: 75%;
+}
+.open #navicon span {
+    top: 50%;
+}
+.open #navicon span:first-child {
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    -moz-transform: translateY(-50%) rotate(45deg);
+    -ms-transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
+}
+.open #navicon span:nth-child(2) {
+    opacity: 0;
+}
+.open #navicon span:nth-child(3) {
+    -webkit-transform: translateY(-50%) rotate(-45deg);
+    -moz-transform: translateY(-50%) rotate(-45deg);
+    -ms-transform: translateY(-50%) rotate(-45deg);
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+@media (max-width: 766px) {
+    header {
+        height: 50px;
+        padding: 10px 0;
+    }
+    header.top {
+        height: 75px;
+    }
+    header.open {
+        height: 250px;
+        background-color: #222;
+    }
+    header #home-link,
+    header #home-link:link,
+    header #home-link:active,
+    header #home-link:visited {
+        height: 30px;
+        width: 30px;
+    }
+    header.top #home-link,
+    header.top #home-link:link,
+    header.top #home-link:active,
+    header.top #home-link:visited {
+        height: 55px;
+        width: 55px;
+    }
+    header nav,
+    header.top nav {
+        float: none;
+        width: 100%;
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        top: 75px;
+        left: 0;
+        padding: 0;
+        -webkit-transition: opacity .3s, visibility .3s;
+        -moz-transition: opacity .3s, visibility .3s;
+        transition: opacity .3s, visibility .3s;
+    }
+    header.open nav {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transition: opacity .3s .3s, visibility .3s .3s;
+        -moz-transition: opacity .3s .3s, visibility .3s .3s;
+        transition: opacity .3s .3s, visibility .3s .3s;
+    }
+    header nav a,
+    header nav a:link,
+    header nav a:active,
+    header nav a:visited {
+        text-align: center;
+        display: block;
+    }
 }
 
 /**
@@ -272,6 +406,11 @@ header nav a:hover {
     background-color: #252525;
     padding-top: 150px;
 }
+.about h1 {
+    color: #fff;
+    margin-top: 0;
+    text-align: center;
+}
 .about header {
     background-color: #1f1f1f;
 }
@@ -286,8 +425,11 @@ header nav a:hover {
     height: auto;
     border: 3px solid #fff;
 }
-#profile ul {
+#profile .desktop ul {
     padding: 0 0 0 10px;
+}
+#profile .mobile ul {
+    padding: 20px 0 0;
 }
 #profile ul a,
 #profile ul a:link,
@@ -312,13 +454,12 @@ header nav a:hover {
     width: 20px;
     margin-right: 10px;
 }
-#resume-logo {
+.profile-logo {
     width: 20px;
     height: 25px;
     vertical-align: text-top;
     margin-right: 10px;
     display: inline-block;
-    background-image: url(../img/logo-white.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -334,6 +475,11 @@ header nav a:hover {
 }
 .about footer {
     background-color: #1f1f1f;
+}
+@media (max-width: 766px) {
+    .about .page {
+        padding-top: 100px;
+    }
 }
 /* End About Page */
 
@@ -463,4 +609,10 @@ footer h6 {
     color: #777;
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
+}
+
+@media (max-width: 766px) {
+    footer h6 {
+        text-align: center;
+    }
 }
