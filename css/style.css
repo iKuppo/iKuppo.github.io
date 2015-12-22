@@ -35,7 +35,7 @@ header {
     z-index: 1;
     padding: 12.5px 0;
     border-bottom: 1px solid rgba(255,255,255,0.25);
-    background-color: #720e1e;
+    background-color: #333;
     height: 75px;
     -webkit-transition: height .3s, background-color .3s;
     -moz-transition: height .3s, background-color .3s;
@@ -166,6 +166,13 @@ header nav a:visited {
 
 #matrix nav {
     color: #fff;
+    font-size: 0;
+}
+
+#matrix nav span {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    margin-right: 20px;
 }
 
 #matrix nav a,
@@ -175,6 +182,12 @@ header nav a:visited {
     color: #fff;
     text-decoration: none;
     line-height: 34px;
+    font-size: 12px;
+    padding: 0 6px;
+    cursor: pointer;
+    -webkit-transition: color .3s;
+    -moz-transition: color .3s;
+    transition: color .3s;
 }
 
 .matrix-box {
@@ -236,6 +249,9 @@ header nav a:visited {
     top: 50%;
     margin: 0;
     pointer-events: none;
+    font-family: 'Gruppo', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -248,5 +264,29 @@ header nav a:visited {
  */
 
 footer {
-    
+    padding: 30px 0 10px;
+    background-color: #252525;
+}
+
+footer ul {
+    float: right;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul a,
+footer ul a:link,
+footer ul a:active,
+footer ul a:visited {
+    color: #fff;
+    padding: 0 8px;
+    border-right: 1px solid #fff;
+    font-size: 20px;
+}
+
+footer h6 {
+    margin: 80px 0 10px;
+    color: #777;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
 }
