@@ -423,6 +423,25 @@ header nav a:hover {
     transform: translateY(-50%);
 }
 
+@media (max-width: 999px) {
+    .matrix-box {
+        width: 50%;
+        padding-bottom: 28.125%;
+    }
+}
+@media (max-width: 766px) {
+    #banner-wrap {
+        padding-top: 75px;
+    }
+}
+@media (max-width: 549px) {
+    .matrix-box {
+        width: 100%;
+        padding-bottom: 56.25%;
+    }
+}
+
+
 /* About Page */
 .about .page {
     background-color: #252525;
