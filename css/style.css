@@ -2,18 +2,15 @@ h1, h2, h3, h4, h5 ,h6 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
 }
-
 a, p {
     font-family: 'Quicksand', sans-serif;
     font-weight: 400;
 }
-
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
 .desktop {
     display: none;
 }
@@ -28,11 +25,9 @@ a, p {
         display: none;
     }
 }
-
 html {
     background-color: #333;
 }
-
 html, body {
     width: 100%;
     margin: 0;
@@ -90,17 +85,26 @@ header #id {
     float: left;
     padding: 0 15px 0;
 }
-header #id h5 {
+header #id h5,
+header #id a,
+header #id a:link,
+header #id a:active,
+header #id a:visited {
     font-family: 'Quicksand', sans-serif;
     color: #fff;
     margin: 0;
     font-size: 12px;
+    text-decoration: none;
     line-height: 16.66px;
     -webkit-transition: line-height .3s, font-size .3s;
     -moz-transition: line-height .3s, font-size .3s;
     transition: line-height .3s, font-size .3s;
 }
-header.top #id h5 {
+header.top #id h5,
+header.top #id a,
+header.top #id a:link,
+header.top #id a:active,
+header.top #id a:visited {
     font-size: 17px;
     line-height: 33.33px;
 }
@@ -224,11 +228,19 @@ header nav a:hover {
         height: 55px;
         width: 55px;
     }
-    header #id h5 {
+    header #id h5,
+    header #id a,
+    header #id a:link,
+    header #id a:active,
+    header #id a:visited {
         font-size: 8px;
         line-height: 10px;
     }
-    header.top #id h5 {
+    header.top #id h5,
+    header.top #id a,
+    header.top #id a:link,
+    header.top #id a:active,
+    header.top #id a:visited {
         font-size: 14px;
         line-height: 18.33px;
     }
@@ -274,7 +286,6 @@ header nav a:hover {
     text-align: center;
     position: relative;
 }
-
 #banner-wrap {
     padding-top: 125px;
     width: 100%;
@@ -286,28 +297,23 @@ header nav a:hover {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-
 #banner h1 {
     margin: 0;
     color: #fff;
     font-size: 50px;
 }
-
 #banner h2 {
     font-family: 'Gruppo', sans-serif;
     color: #fff;
     font-size: 20px;
 }
-
 #matrix {
     width: 100%;
 }
-
 #matrix-header {
     background-color: #333;
     height: 64px;
 }
-
 #matrix h3 {
     color: #fff;
     float: left;
@@ -315,24 +321,20 @@ header nav a:hover {
     line-height: 64px;
     font-size: 20px;
 }
-
 #matrix nav {
     float: right;
     height: 64px;
     padding: 15px 0;
 }
-
 #matrix nav {
     color: #fff;
     font-size: 0;
 }
-
 #matrix nav span {
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     margin-right: 20px;
 }
-
 #matrix nav a,
 #matrix nav a:link,
 #matrix nav a:active,
@@ -343,11 +345,21 @@ header nav a:hover {
     font-size: 12px;
     padding: 0 6px;
     cursor: pointer;
-    -webkit-transition: color .3s;
-    -moz-transition: color .3s;
-    transition: color .3s;
+    opacity: .75;
+    -webkit-transition: opacity .3s;
+    -moz-transition: opacity .3s;
+    transition: opacity .3s;
 }
-
+#matrix nav a.selected,
+#matrix nav a.selected:link,
+#matrix nav a.selected:active,
+#matrix nav a.selected:visited {
+    color: #FF2424;
+    opacity: 1;
+}
+#matrix nav a:hover {
+    opacity: 1;
+}
 .matrix-box {
     width: 25%;
     height: 0;
@@ -362,7 +374,6 @@ header nav a:hover {
     cursor: pointer;
     overflow: hidden;
 }
-
 .matrix-box .matrix-image {
     background-size: cover;
     background-position: center;
@@ -376,14 +387,12 @@ header nav a:hover {
     -moz-transition: transform .5s, left .03s, top .03s;
     transition: transform .5s, left .03s, top .03s;
 }
-
 .matrix-box:hover .matrix-image {
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
 }
-
 .matrix-box .overlay {
     position: absolute;
     left: 0;
@@ -395,11 +404,9 @@ header nav a:hover {
     -moz-transition: background-color .3s;
     transition: background-color .3s;
 }
-
 .matrix-box:hover .overlay {
     background-color: rgba(0,0,0,0);
 }
-
 .matrix-box h4 {
     color: #fff;
     width: 100%;
@@ -415,7 +422,6 @@ header nav a:hover {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-
 
 /* About Page */
 .about .page {
@@ -635,13 +641,11 @@ footer {
     padding: 30px 0 10px;
     background-color: #252525;
 }
-
 footer ul {
     float: right;
     padding: 0;
     margin: 0;
 }
-
 footer ul a,
 footer ul a:link,
 footer ul a:active,
@@ -651,14 +655,12 @@ footer ul a:visited {
     border-right: 1px solid #fff;
     font-size: 20px;
 }
-
 footer h6 {
     margin: 80px 0 10px;
     color: #777;
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
 }
-
 @media (max-width: 766px) {
     footer h6 {
         text-align: center;
