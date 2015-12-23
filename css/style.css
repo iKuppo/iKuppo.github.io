@@ -346,6 +346,7 @@ header nav a:hover {
     padding: 0 6px;
     cursor: pointer;
     opacity: .75;
+    font-weight: 700;
     -webkit-transition: opacity .3s;
     -moz-transition: opacity .3s;
     transition: opacity .3s;
@@ -674,6 +675,19 @@ footer ul a:visited {
     border-right: 1px solid #fff;
     font-size: 20px;
 }
+footer ul a:last-child {
+    border: none;
+}
+.footer-logo {
+    width: 20px;
+    height: 25px;
+    vertical-align: text-top;
+    margin-right: 10px;
+    display: inline-block;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 footer h6 {
     margin: 80px 0 10px;
     color: #777;
@@ -681,6 +695,10 @@ footer h6 {
     font-weight: 700;
 }
 @media (max-width: 766px) {
+    footer ul {
+        float: none;
+        text-align: center;
+    }
     footer h6 {
         text-align: center;
     }
