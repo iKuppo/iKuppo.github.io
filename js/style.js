@@ -1,5 +1,6 @@
 $(document).ready(function() {  
 	sizeitup();
+    $('#name').focus();
 });
 $(window).resize(function() {
 	sizeitup();

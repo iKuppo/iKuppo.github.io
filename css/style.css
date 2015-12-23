@@ -56,16 +56,13 @@ header {
     -moz-transition: height .3s, background-color .3s;
     transition: height .3s, background-color .3s;
 }
-
 header.top {
     background-color: transparent;
     height: 125px;
 }
-
 header .grid {
     position: relative;
 }
-
 header #home-link,
 header #home-link:link,
 header #home-link:active,
@@ -82,7 +79,6 @@ header #home-link:visited {
     -moz-transition: height .3s, width .3s;
     transition: height .3s, width .3s;
 }
-
 header.top #home-link,
 header.top #home-link:link,
 header.top #home-link:active,
@@ -90,7 +86,24 @@ header.top #home-link:visited {
     height: 100px;
     width: 100px;
 }
-
+header #id {
+    float: left;
+    padding: 0 15px 0;
+}
+header #id h5 {
+    font-family: 'Quicksand', sans-serif;
+    color: #fff;
+    margin: 0;
+    font-size: 12px;
+    line-height: 16.66px;
+    -webkit-transition: line-height .3s, font-size .3s;
+    -moz-transition: line-height .3s, font-size .3s;
+    transition: line-height .3s, font-size .3s;
+}
+header.top #id h5 {
+    font-size: 17px;
+    line-height: 33.33px;
+}
 header nav {
     float: right;
     height: 100%;
@@ -99,11 +112,9 @@ header nav {
     -moz-transition: padding .3s;
     transition: padding .3s;
 }
-
 header.top nav {
     padding: 25px 0;
 }
-
 header nav a,
 header nav a:link,
 header nav a:active,
@@ -118,7 +129,6 @@ header nav a:visited {
     -moz-transition: opacity .3s;
     transition: opacity .3s;
 }
-
 header nav a.selected,
 header nav a.selected:link,
 header nav a.selected:active,
@@ -126,11 +136,9 @@ header nav a.selected:visited {
     color: #FF2424;
     opacity: 1;
 }
-
 header nav a:hover {
     opacity: 1;
 }
-
 #navicon {
     width: 20px;
     height: 30px;
@@ -215,6 +223,14 @@ header nav a:hover {
     header.top #home-link:visited {
         height: 55px;
         width: 55px;
+    }
+    header #id h5 {
+        font-size: 8px;
+        line-height: 10px;
+    }
+    header.top #id h5 {
+        font-size: 14px;
+        line-height: 18.33px;
     }
     header nav,
     header.top nav {
@@ -576,6 +592,38 @@ header nav a:hover {
 }
 #social ul a:hover {
     opacity: 1;
+}
+#social .social-logo {
+    height: 75px;
+    width: 73px;
+    vertical-align: text-top;
+    display: inline-block;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+@media (max-width: 766px) {
+    .contact .page {
+        padding-top: 100px;
+    }
+    #contact h1 {
+        padding: 0;
+    }
+    #contact h2 {
+        float: none;
+    }
+    ::-webkit-input-placeholder {
+       color: rgba(255,255,255,.4);
+    }
+    :-moz-placeholder {
+       color: rgba(255,255,255,.4);
+    }
+    ::-moz-placeholder {
+       color: rgba(255,255,255,.4);
+    }
+    :-ms-input-placeholder {  
+       color: rgba(255,255,255,.4);
+    }
 }
 /* End Contact Page */
 
