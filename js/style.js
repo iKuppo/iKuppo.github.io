@@ -105,3 +105,31 @@ $(document).ready(function(){
         return false;
     });
 });
+
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+
+// Matrix Filtering
+
+$('#matrix-header a').click(function() {
+    
+    // change selected nav color
+    $('#matrix-header a').removeClass('selected');
+    $(this).addClass('selected');
+    
+    // determine which type to select
+    var filter = $(this).attr('data-type');
+
+    $('.matrix-box').addClass('out').delay(400).queue(function(next){
+        if (filter == '2d') {
+            $('.matrix-box.2d').css('display', 'block').removeClass('out');
+        } else if (filter == '3d') {
+            $('.matrix-box.3d').css('display', 'block').removeClass('out');
+        } else {
+            $('.matrix-box').css('display', 'block').removeClass('out');
+        }
+        $('.matrix-box.out').css('display', 'none');
+        next();
+    });
+});
+
