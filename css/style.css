@@ -531,7 +531,7 @@ header nav a:hover {
     padding-top: 150px;
 }
 #contact {
-    padding-bottom: 75px;
+    padding-bottom: 25px;
 }
 #contact h1 {
     text-align: center;
@@ -589,6 +589,12 @@ header nav a:hover {
 }
 #contact input[type="submit"]:hover {
     background-color: #333;
+}
+#contact h3 {
+    height: 30px;
+    margin: 20px 0 0;
+    text-align: center;
+    color: #fff;
 }
 #social {
     background-color: #292929;

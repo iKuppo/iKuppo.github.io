@@ -96,6 +96,7 @@ function clean() {
 	$('#name').val('');
 	$('#email').val('');
 	$('#message').val('');
+    $('#contact h3').html('Message Received!');
 }
 
 $(document).ready(function(){
