@@ -274,6 +274,98 @@ header nav a:hover {
     }
 }
 
+/* Loader */
+#loader,
+#unloader {
+    z-index: 201;
+    position: fixed;
+    top: 0;
+    width:100%;
+    height: 100%;
+    background: #222;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity .3s, visibility .3s;
+    -moz-transition: opacity .3s, visibility .3s;
+    transition: opacity .3s, visibility .3s;
+}
+#loader.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+#unloader {
+    opacity: 0;
+    visibility: hidden;
+}
+#unloader.unload {
+    opacity: 1;
+    visibility: visible;
+}
+#loader-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 100px;
+    height: 100px;
+    opacity: .7;
+    background-image: url(/img/logo-white.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-transform: translate(-50%, -110%);
+    -moz-transform: translate(-50%, -110%);
+    -ms-transform: translate(-50%, -110%);
+    transform: translate(-50%, -110%);
+}
+#loader span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: transparent;
+    overflow: hidden;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+#loader span:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 85%;
+    height: 100%;
+    background: rgba(255,255,255,.4);
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    -webkit-animation: progressBar 5s ease-out;
+    animation: progressBar 5s ease-out;
+}
+@-webkit-keyframes progressBar {
+    100% {width:85%;}
+    60% {width:75%;}
+    20% {width:40%;}
+    0% {width:0%;}
+}
+@keyframes progressBar {
+    100% {width:85%;}
+    60% {width:75%;}
+    20% {width:40%;}
+    0% {width:0%;}
+}
+#loader.loaded span:after {
+    -webkit-animation: none;
+    animation: none;
+    width: 100%;
+}
+/* End Loader*/
+
 /**
  * 5.0 Content
  */

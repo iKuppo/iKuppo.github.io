@@ -133,3 +133,25 @@ $('#matrix-header a').click(function() {
     });
 });
 
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+
+// PAGE TRANSITION
+$(document).ready(function(){
+    $(window).load(function() {
+      $('#loader').addClass('loaded');
+    });
+
+    // remove loading page after 6secs
+    setTimeout(function(){
+      $('#loader').addClass('loaded');
+    }, 6000);
+})
+// to fade out before redirect
+$(document.body).on('click', 'a[href*="/"]:not([href^="mailto"], [target="_blank"], [href^="#"], [href=""])' ,function(e){
+    e.preventDefault();
+    redirect = $(this).attr('href');
+    $('#unloader').addClass('unload');
+    setTimeout('document.location.href = redirect',400);
+});
+
