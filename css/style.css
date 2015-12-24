@@ -42,7 +42,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 200;
     padding: 12.5px 0;
     border-bottom: 1px solid rgba(255,255,255,0.25);
     background-color: #333;
@@ -442,6 +442,41 @@ header nav a:hover {
     }
 }
 
+/* Portfolio Exposes */
+#expose {
+    padding: 40px 0;
+}
+#expose .grid {
+    padding: 0 10px;
+}
+#expose [class^="col-"] {
+    padding: 0 10px;
+}
+#expose .cycle-slide-show-wrap {
+    padding-right: 10px;
+}
+#expose .cycle-slideshow img {
+    width: 100%;
+    height: auto;
+}
+#expose #adv-custom-pager {
+    padding: 10px 0;
+    font-size: 0;
+}
+#expose #adv-custom-pager a {
+    width: 25%;
+    padding-right: 10px;
+    display: inline-block;
+}
+#expose #adv-custom-pager div {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* End Portfolio Exposes */
 
 /* About Page */
 .about .page {
