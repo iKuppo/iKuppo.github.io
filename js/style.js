@@ -41,26 +41,26 @@ $('#navicon').click(function() {
 //     follower.css({left:xp, top:yp});
 // }, 30);
 
-$('.matrix-box').mousemove(function(e){
-	// var offset = $(this).offset();
-	// var relX = mouseX - offset.left;
-	// var relY = mouseY - offset.top;
-    var midX = (e.offsetX - ($(this).width()/2))/-20;
-    var midY = (e.offsetY - ($(this).outerHeight()/2))/-20;
-    $(this).find('.matrix-image').css('left', midX);
-    $(this).find('.matrix-image').css('top', midY);
-});
+// $('.matrix-box').mousemove(function(e){
+// 	// var offset = $(this).offset();
+// 	// var relX = mouseX - offset.left;
+// 	// var relY = mouseY - offset.top;
+//     var midX = (e.offsetX - ($(this).width()/2))/-20;
+//     var midY = (e.offsetY - ($(this).outerHeight()/2))/-20;
+//     $(this).find('.matrix-image').css('left', midX);
+//     $(this).find('.matrix-image').css('top', midY);
+// });
 
-$('.matrix-box').mouseout(function(e){
-    $(this).find('.matrix-image').animate({
-    	top: 0,
-    	left: 0
-    }, 300);
-});
+// $('.matrix-box').mouseout(function(e){
+//     $(this).find('.matrix-image').animate({
+//     	top: 0,
+//     	left: 0
+//     }, 300);
+// });
 
-$('.matrix-box h4').mousemove(function(e) {
-	e.stopPropagation();
-});
+// $('.matrix-box h4').mousemove(function(e) {
+// 	e.stopPropagation();
+// });
 
 /////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////
@@ -153,5 +153,24 @@ $(document.body).on('click', 'a[href*="/"]:not([href^="mailto"], [target="_blank
     redirect = $(this).attr('href');
     $('#unloader').addClass('unload');
     setTimeout('document.location.href = redirect',400);
+});
+
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+
+// Lightbox
+
+$('#expose img').click(function() {
+    var slideNumber = $(this).attr('data-slide') - 1;
+    $('#lightbox .cycle-slideshow').cycle('goto', slideNumber);
+    $('#lightbox').addClass('open');
+});
+
+$('#lightbox, #close').click(function() {
+   $('#lightbox').removeClass('open'); 
+});
+
+$('#lightbox-spot, #next, #prev').click(function(e) {
+    e.stopPropagation();
 });
 
