@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
 
-    <title>Andy Lao</title>
+    <title>Burial | Andy Lao</title>
     <meta name="description" content="">
     <meta name="author" content="Max Yeo">
 
@@ -14,7 +14,7 @@
 
     <meta name="theme-color" content="#720e1e">
 
-    <meta property="og:title" content=""/>
+    <meta property="og:title" content="Burial"/>
     <meta property="og:url" content=""/>
     <meta property="og:image" content=""/>
     <meta property="og:site_name" content="Andy Lao"/>
@@ -24,7 +24,7 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
-<body class="home">
+<body class="portfolio">
     <div id="loader">
         <div id="loader-logo"></div>
         <span></span>
@@ -51,50 +51,27 @@
         </div>
     </header>
     <div class="page">
-        <div id="banner" style="background-image: url(/img/header.jpg);">
+        <div id="banner" style="background-image: url(/img/Burial/Burial_Header.jpg);">
             <div id="banner-wrap">
-                <h1>Andy Lao</h1>
-                <h2>Student Artist</h2>
+                <h1>Burial</h1>
             </div>
-        </div>
-        <div id="matrix">
-            <div id="matrix-header">
-                <div class="grid cf">
-                    <h3>All</h3>
-                    <nav>
-                        <span>Sort Portfolio:</span>
-                        <a class="selected" data-type="all">All</a>
-                        <a data-type="2d">2D</a>
-                        <a data-type="3d">3D</a>
-                    </nav>
-                </div>
-            </div>
-            <div id="matrix-grid" class="cf">
-                <a href="/portfolio/Amelia" class="matrix-box 2d">
-                  <div class="matrix-image" style="background-image: url(/img/Amelia/Amelia_Presentation.jpg);"></div>
-                  <div class="overlay">
-                      <h4>Amelia - The Astray</h4>
-                  </div>
-                </a>
-                <a href="/portfolio/TBC" class="matrix-box 3d">
-                  <div class="matrix-image" style="background-image: url(/img/TBC/TBC_Thumbnail.jpg);"></div>
-                  <div class="overlay">
-                      <h4>T.B.C X Booster Squad</h4>
-                  </div>
-                </a>
 
-                <a href="/portfolio/Burial" class="matrix-box 2d">
-                    <div class="matrix-image" style="background-image: url(/img/Burial/Burial.jpg);"></div>
-                    <div class="overlay">
-                        <h4>Burial</h4>
-                    </div>
-                </a>
-                <a class="matrix-box 2d">
-                    <div class="matrix-image" style="background-image: url(/img/Splitscreen/splitscreen.jpg);"></div>
-                    <div class="overlay">
-                        <h4>Split Screen</h4>
-                    </div>
-                </a>
+        </div>
+        <div id="expose">
+            <div class="grid cf">
+                <div class="col-2-3">
+                    <img src="/img/Burial/Burial.jpg" data-slide="1">
+                </div>
+                <div class="col-1-3">
+                    <h2>About Burial</h2>
+                    <p>"Burial" is a piece that I did for fun. "Burial" represents a monument that I envisioned to be
+                      at the top of a mountain. I imagined it would be at the end of a spiritual journey or pilgrimage
+                       and beneath it would be the said “remains” of a powerful spiritual figure. The chains and the sharp, spike
+                       - like design are meant to suggest that this spiritual figure was brutally sacrificed and was a martyr for his or her people.
+                       The arc behind the monument is meant to symbolize community, family and open arms, and how communities and families are
+                       circular bonds that are all inclusive. The cross - like shape was a design choice meant to draw similarities between “Burial”
+                       and the story of the crucifixion. </p>
+                </div>
             </div>
         </div>
     </div>
@@ -108,7 +85,32 @@
             <h6>© ANDY LAO. ALL RIGHTS RESERVED 2015</h6>
         </div>
     </footer>
+    <div id="lightbox">
+        <div id="lightbox-spot">
+            <div class="cycle-slideshow"
+                data-cycle-fx=fade
+                data-cycle-timeout=0
+                data-cycle-slides="> div"
+                data-cycle-prev="#prev"
+                data-cycle-next="#next"
+                >
+                <div class="lb-actor" style="background-image: url(/img/Burial/Burial.jpg);"></div>
+
+            </div>
+        </div>
+        <div id="prev">
+            <span></span>
+        </div>
+        <div id="next">
+            <span></span>
+        </div>
+        <div id="close">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
     <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/cycle.js"></script>
     <script type="text/javascript" src="/js/style.js"></script>
 </body>
 </html>
