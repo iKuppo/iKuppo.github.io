@@ -1,4 +1,4 @@
-$(document).ready(function() {  
+$(document).ready(function() {
 	sizeitup();
     $('#name').focus();
 });
@@ -34,7 +34,7 @@ $('#navicon').click(function() {
 // var mouseX = 0, mouseY = 0;
 // $(document).mousemove(function(e){
 //    mouseX = e.pageX;
-//    mouseY = e.pageY; 
+//    mouseY = e.pageY;
 // });
 
 // var loop = setInterval(function(){
@@ -112,11 +112,11 @@ $(document).ready(function(){
 // Matrix Filtering
 
 $('#matrix-header a').click(function() {
-    
+
     // change selected nav color
     $('#matrix-header a').removeClass('selected');
     $(this).addClass('selected');
-    
+
     // determine which type to select
     var filter = $(this).attr('data-type');
 
@@ -125,7 +125,9 @@ $('#matrix-header a').click(function() {
             $('.matrix-box.2d').css('display', 'block').removeClass('out');
         } else if (filter == '3d') {
             $('.matrix-box.3d').css('display', 'block').removeClass('out');
-        } else {
+				} else if (filter == 'vid') {
+					$('.matrix-box.vid').css('display', 'block').removeClass('out');
+			}else {
             $('.matrix-box').css('display', 'block').removeClass('out');
         }
         $('.matrix-box.out').css('display', 'none');
@@ -167,10 +169,9 @@ $('#expose img').click(function() {
 });
 
 $('#lightbox, #close').click(function() {
-   $('#lightbox').removeClass('open'); 
+   $('#lightbox').removeClass('open');
 });
 
 $('#lightbox-spot, #next, #prev').click(function(e) {
     e.stopPropagation();
 });
-
