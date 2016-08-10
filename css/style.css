@@ -1,9 +1,9 @@
 h1, h2, h3, h4, h5 ,h6 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+    font-family: 'Coalition', sans-serif;
+    font-weight: 270;
 }
 a, p {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
 }
 * {
@@ -90,7 +90,7 @@ header #id a,
 header #id a:link,
 header #id a:active,
 header #id a:visited {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: #fff;
     margin: 0;
     font-size: 12px;
