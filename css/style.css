@@ -646,7 +646,7 @@ header nav a:hover {
     background-position: center;
     background-repeat: no-repeat;
 }
-#next, 
+#next,
 #prev {
     z-index: 250;
     position: absolute;
@@ -949,7 +949,7 @@ header nav a:hover {
     ::-moz-placeholder {
        color: rgba(255,255,255,.4);
     }
-    :-ms-input-placeholder {  
+    :-ms-input-placeholder {
        color: rgba(255,255,255,.4);
     }
 }

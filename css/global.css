@@ -369,12 +369,12 @@ table {
     width: 100%;
     max-width: 1280px;
     padding: 0 20px;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
 [class^="col-"] {
     display: block;
-    width: 100%; 
+    width: 100%;
 }
 
 @media (min-width: 767px){
@@ -385,7 +385,7 @@ table {
         padding: 0 40px;
     }
     .col-1-16 {
-      width: 6.25%; 
+      width: 6.25%;
     }
     .col-2-16 {
       width: 12.5%;
@@ -471,7 +471,7 @@ table {
         }
     /* @group push */
         .push-1 {
-          margin-left: 6.25%; 
+          margin-left: 6.25%;
         }
         .push-2 {
           margin-left: 12.5%;
@@ -595,4 +595,3 @@ table {
   src: local('Quicksand Bold'), local('Quicksand-Bold'), url(https://fonts.gstatic.com/s/quicksand/v5/32nyIRHyCu6iqEka_hbKshampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
-
